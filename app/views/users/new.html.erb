@@ -1,0 +1,47 @@
+<div class="columns">
+  <div class="column">
+  </div>
+  <div class="column">
+    <h1 class="title-text">Sign Up</h1>
+    <div class="card">
+      <div class="card-content">
+        <%= form_with scope: :users, local: true do |form| %>
+          <p>
+            <h1 class="label">Name</h1><br>
+            <%= form.text_field :names,{:class=>"field input"} %>
+          </p>
+
+          <p>
+            <h1 class="label">E-mail</h1><br>
+            <%= form.email_field :email,{:class=>"field input"} %>
+          </p>
+
+          <p>
+            <h1 class="label">Password</h1><br>
+            <%= form.password_field :password,{:class=>"field input"} %>
+          </p>
+
+          <p>
+            <h1 class="label">Confirm Password</h1><br>
+            <%= form.password_field :password,{:class=>"field input"} %>
+          </p>
+
+          <p>
+            <%= check_box_tag('tos', checked= false ) %>
+            <%= label_tag("I agree to the terms and conditions") %>
+          </p>
+          <br>
+
+          <p>
+            <%= form.submit 'Complete Registration' , :class => 'button is-link' %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+  </div>
+</div>
+
+
+
